@@ -1,0 +1,43 @@
+<!-- Tech Stack Section -->
+<section id="skills" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="gradient-text">Technology Stack</span>
+            </h2>
+            <p class="text-gray-500 max-w-xl mx-auto">데이터 수집부터 모델링, 배포까지 E2E 파이프라인을 구축하는 기술 역량</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Radar Chart -->
+            <div class="fade-in-left">
+                <div id="radar-chart" style="width: 100%; height: 400px;"></div>
+            </div>
+
+            <!-- Tech Grid -->
+            <div class="fade-in-right space-y-6 stagger-children">
+                {% for category in skills %}
+                <div class="fade-in-up glass-card p-5">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-white text-sm">{{ category.name }}</h3>
+                        <span class="text-xs text-gray-500">{{ category.proficiency }}%</span>
+                    </div>
+                    <!-- Progress bar -->
+                    <div class="w-full bg-white/5 rounded-full h-1.5 mb-4">
+                        <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                             style="width: {{ category.proficiency }}%"></div>
+                    </div>
+                    <!-- Tech badges -->
+                    <div class="flex flex-wrap gap-2">
+                        {% for tech in category.technologies %}
+                        <span class="tech-badge">{{ tech.name }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider mt-24"></div>
+</section>

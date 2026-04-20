@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% include "components/hero.html" %}
+    {% include "components/skills.html" %}
+    {% include "components/projects.html" %}
+    {% include "components/timeline.html" %}
+    {% include "components/contact.html" %}
+
+    <!-- Pass data to JavaScript for charts -->
+    <script>
+        const skillsData = {{ skills_json | safe }};
+        const projectsData = {{ projects_json | safe }};
+    </script>
+{% endblock %}

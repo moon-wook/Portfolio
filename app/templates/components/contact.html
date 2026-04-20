@@ -1,0 +1,55 @@
+<!-- Contact / Footer Section -->
+<section id="contact" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12 fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="gradient-text">Contact</span>
+            </h2>
+            <p class="text-gray-500">함께 성장할 기회를 기다리고 있습니다</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 fade-in-up stagger-children">
+            <!-- Email -->
+            <a href="mailto:{{ profile.contact.email }}"
+               class="fade-in-up glass-card px-8 py-6 flex items-center gap-4 hover:border-blue-500/30 transition min-w-[250px]">
+                <span class="material-icons-round text-2xl text-blue-400">email</span>
+                <div>
+                    <div class="text-xs text-gray-500 mb-1">Email</div>
+                    <div class="text-sm text-white">{{ profile.contact.email }}</div>
+                </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:{{ profile.contact.phone }}"
+               class="fade-in-up glass-card px-8 py-6 flex items-center gap-4 hover:border-cyan-500/30 transition min-w-[250px]">
+                <span class="material-icons-round text-2xl text-cyan-400">phone</span>
+                <div>
+                    <div class="text-xs text-gray-500 mb-1">Phone</div>
+                    <div class="text-sm text-white">{{ profile.contact.phone }}</div>
+                </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="{{ profile.contact.github }}" target="_blank"
+               class="fade-in-up glass-card px-8 py-6 flex items-center gap-4 hover:border-purple-500/30 transition min-w-[250px]">
+                <span class="material-icons-round text-2xl text-purple-400">code</span>
+                <div>
+                    <div class="text-xs text-gray-500 mb-1">GitHub</div>
+                    <div class="text-sm text-white">github.com/moon-wook</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-gray-600 text-xs">
+            Built with FastAPI + Jinja2 + Tailwind CSS + ECharts
+        </p>
+        <p class="text-gray-700 text-xs mt-1">
+            &copy; 2025 {{ profile.name_ko }}. All rights reserved.
+        </p>
+    </div>
+</footer>

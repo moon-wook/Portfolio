@@ -1,0 +1,80 @@
+TIMELINE_EVENTS = [
+    {
+        "date": "2018.03",
+        "title": "한국교통대학교 입학",
+        "description": "전자공학과",
+        "type": "education",
+        "tags": [],
+    },
+    {
+        "date": "2019.05",
+        "title": "육군 입대",
+        "description": "병장 만기전역 (2020.12)",
+        "type": "military",
+        "tags": [],
+    },
+    {
+        "date": "2024.02",
+        "title": "한국교통대학교 졸업",
+        "description": "전자공학과 | GPA 3.67/4.5",
+        "type": "education",
+        "tags": ["CNN", "YOLO", "컴퓨터비전"],
+    },
+    {
+        "date": "2024.02",
+        "title": "KT AIVLE School 입과",
+        "description": "데이터 분석, ML/DL, NLP 실무 교육 + 8개 프로젝트",
+        "type": "bootcamp",
+        "tags": ["Python", "ML", "DL", "NLP"],
+    },
+    {
+        "date": "2024.07",
+        "title": "케어키즈 프로젝트",
+        "description": "ko-BERT 파인튜닝 리뷰 감성분석 | 정확도 56% -> 95%",
+        "type": "project",
+        "tags": ["PyTorch", "ko-BERT", "NLP"],
+    },
+    {
+        "date": "2024.08",
+        "title": "KT AIVLE School 수료",
+        "description": "7개 미니 프로젝트 + 1개 빅 프로젝트 완료",
+        "type": "bootcamp",
+        "tags": [],
+    },
+    {
+        "date": "2025.02",
+        "title": "㈜위플랫 입사",
+        "description": "기술개발센터 AI 엔지니어",
+        "type": "career",
+        "tags": ["TensorFlow", "Keras", "IoT"],
+    },
+    {
+        "date": "2025.02",
+        "title": "NELOW 누수 탐지 AI",
+        "description": "CNN 기반 누수 판별 모델 E2E 개발 | 8개국 배포",
+        "type": "project",
+        "tags": ["CNN", "Autoencoder", "FFT", "MEL"],
+    },
+    {
+        "date": "2025.05",
+        "title": "KOMIPO 발전소 누수 진단",
+        "description": "발전소 환경 적응형 노이즈 제거 + 누수 탐지",
+        "type": "project",
+        "tags": ["노이즈 제거", "Autoencoder"],
+    },
+    {
+        "date": "2025.06",
+        "title": "HI WIPLAT",
+        "description": "음성 제어 AI Agent (Whisper + GPT + Playwright)",
+        "type": "project",
+        "tags": ["LLM", "STT", "Playwright"],
+    },
+]
+
+CERTIFICATIONS = [
+    {"name": "정보처리기사", "org": "한국산업인력공단", "date": "2023.09"},
+    {"name": "파이썬프로그래밍활용능력 2급", "org": "한국정보인재개발원", "date": "2023.01"},
+    {"name": "AI활용전문가 1급", "org": "한국교육검정원", "date": "2025.11"},
+    {"name": "인공지능(AI)전문가 1급", "org": "한국자격증협회", "date": "2025.11"},
+    {"name": "데이터분석준전문가 (ADsP)", "org": "한국데이터베이스진흥원", "date": "2025.11"},
+]

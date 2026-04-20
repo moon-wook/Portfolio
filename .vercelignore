@@ -1,0 +1,12 @@
+.venv
+.git
+.claude
+.env
+Dockerfile
+docker-compose.yml
+ngrok.yml
+ngrok.yml.example
+docs/
+**/__pycache__
+*.pyc
+*.pyo

@@ -1,0 +1,62 @@
+<!-- Hero Section -->
+<section id="hero" class="min-h-screen flex items-center justify-center relative dot-grid pt-16">
+    <!-- Background gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/50 to-dark-900 pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <!-- Photo -->
+            <div class="fade-in-left flex-shrink-0">
+                <div class="photo-glow w-64 h-64 rounded-full overflow-hidden">
+                    <img src="{{ profile.photo_path }}" alt="{{ profile.name_ko }}"
+                         class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="fade-in-right text-center lg:text-left">
+                <p class="text-gray-400 text-lg mb-2">AI Engineer & Full-Stack Developer</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    <span class="text-white">개발자 </span>
+                    <span class="gradient-text">{{ profile.name_ko }}</span>
+                    <span class="text-white"> 입니다</span>
+                </h1>
+                <p class="text-gray-400 text-lg max-w-2xl mb-8 leading-relaxed">
+                    {{ profile.summary }}
+                </p>
+
+                <!-- Metrics -->
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 stagger-children">
+                    {% for metric in profile.metrics %}
+                    <div class="fade-in-up glass-card metric-card px-6 py-4 min-w-[120px]">
+                        <div class="metric-value text-2xl">{{ metric.value }}</div>
+                        <div class="text-gray-500 text-xs mt-1 font-medium">{{ metric.label }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Career + Education badges -->
+                <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                    <div class="glass-card px-4 py-2 flex items-center gap-2">
+                        <span class="material-icons-round text-blue-400 text-sm">business</span>
+                        <span class="text-sm">{{ profile.career.company }}</span>
+                        <span class="text-gray-500 text-xs">{{ profile.career.period }}</span>
+                    </div>
+                    <div class="glass-card px-4 py-2 flex items-center gap-2">
+                        <span class="material-icons-round text-cyan-400 text-sm">school</span>
+                        <span class="text-sm">{{ profile.education.school }}</span>
+                        <span class="text-gray-500 text-xs">{{ profile.education.major }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 animate-bounce">
+            <span class="text-xs">SCROLL</span>
+            <span class="material-icons-round text-sm">expand_more</span>
+        </div>
+    </div>
+</section>

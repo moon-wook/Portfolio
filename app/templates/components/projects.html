@@ -1,0 +1,67 @@
+<!-- Projects Section — Card Overview -->
+<section id="projects" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="gradient-text">Projects</span>
+            </h2>
+            <p class="text-gray-500 max-w-xl mx-auto">클릭하여 상세 내용을 확인하세요</p>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+            {% for project in projects %}
+            <a href="/project/{{ project.id }}" class="fade-in-up block group">
+                <div class="glass-card theme-card p-6 h-full flex flex-col" style="--theme-color: {{ project.color }}">
+                    <!-- Icon + Title -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: {{ project.color }}15">
+                            <span class="material-icons-round text-xl" style="color: {{ project.color }}">{{ project.icon }}</span>
+                        </span>
+                        <div>
+                            <h3 class="text-base font-bold text-white group-hover:text-blue-300 transition">{{ project.title }}</h3>
+                            <p class="text-[11px] text-gray-500">{{ project.subtitle }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <p class="text-sm text-gray-400 leading-relaxed mb-5 flex-1">{{ project.summary }}</p>
+
+                    <!-- Metrics Row -->
+                    <div class="flex gap-3 mb-5">
+                        {% for m in project.metrics[:3] %}
+                        <div class="flex-1 text-center p-2 rounded-lg bg-white/[0.02]">
+                            <div class="text-sm font-bold gradient-text">{{ m.value }}</div>
+                            <div class="text-[10px] text-gray-500">{{ m.label }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        {% for tech in project.tech_stack.values()|list %}
+                        {% for t in tech[:2] %}
+                        <span class="tech-badge text-[10px] px-2 py-0.5" style="border-color: {{ project.color }}30; background: {{ project.color }}08;">{{ t }}</span>
+                        {% endfor %}
+                        {% endfor %}
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center gap-2 text-xs text-gray-500">
+                            <span class="material-icons-round text-[14px]">calendar_today</span>
+                            {{ project.period }}
+                        </div>
+                        <div class="flex items-center gap-1 text-xs text-gray-500 group-hover:text-blue-400 transition">
+                            자세히 보기
+                            <span class="material-icons-round text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section-divider mt-24"></div>
+</section>
