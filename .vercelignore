@@ -10,3 +10,8 @@ docs/
 **/__pycache__
 *.pyc
 *.pyo
+
+# Exclude uv/pyproject toolchain — Vercel must use requirements.txt + default Python 3.12
+uv.lock
+pyproject.toml
+.python-version
