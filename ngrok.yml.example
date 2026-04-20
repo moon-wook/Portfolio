@@ -1,7 +1,0 @@
-version: "2"
-authtoken: REPLACE_WITH_YOUR_NGROK_AUTHTOKEN
-tunnels:
-  portfolio:
-    proto: http
-    addr: portfolio:8000
-    domain: REPLACE_WITH_YOUR_STATIC_DOMAIN.ngrok-free.app
